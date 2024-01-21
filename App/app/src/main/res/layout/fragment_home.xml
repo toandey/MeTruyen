@@ -1,0 +1,1812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".adapter.fragment.HomeFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/waveViewTop1"
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bgapp"
+                android:alpha="0.8"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <ImageView
+                    android:id="@+id/appLogo"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/logo_app_white"
+                    android:padding="13dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/searchIcon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/search"
+                    app:layout_constraintBottom_toBottomOf="@+id/appLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appLogo" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="70dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="20dp">
+
+                <com.denzcoskun.imageslider.ImageSlider
+                    android:id="@+id/image_slider"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:iss_auto_cycle="true"
+                    app:iss_delay="2500"
+                    app:iss_period="1000"
+                    app:iss_text_align="CENTER" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/slider"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <!-- TextView bên trái -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bảng xếp hạng"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/rankingList"
+                android:layout_below="@id/ranking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/storiesLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal">
+
+                        <!-- Truyện 1 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!-- Phần thông tin truyện bên phải -->
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking1"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="1"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Truyện 2 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking4"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="4"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Truyện 7 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking7"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="7"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <!-- Truyện 4 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking2"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="2"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Truyện 5 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking5"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="5"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Truyện 8 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking8"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="8"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="15dp">
+
+                        <!-- Truyện 9 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking3"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="3"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Truyện 6 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking6"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="6"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!-- Truyện 9 -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageRanking9"
+                                    android:layout_width="67dp"
+                                    android:layout_height="100dp"
+                                    android:src="@drawable/image_cover" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|left"
+                                    android:padding="4dp"
+                                    android:text="9"
+                                    android:textSize="10dp"
+                                    android:background="@drawable/shape_number_square"
+                                    android:textColor="#FFFFFF" />
+                            </FrameLayout>
+
+                            <!-- Phần thông tin truyện bên phải -->
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:orientation="vertical"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="20dp">
+
+                                <!-- Tên truyện -->
+                                <TextView
+                                    android:id="@+id/tentruyenRanking9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rb_medium"
+                                    android:letterSpacing="-0.03"
+                                    android:text="Truyện 1"
+                                    android:textSize="18dp"
+                                    android:textColor="@color/black"/>
+
+                                <!-- Thể loại -->
+                                <TextView
+                                    android:id="@+id/theloaiRanking9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:text="Thể loại 1"
+                                    android:fontFamily="@font/rb_regular"
+                                    android:textSize="16dp"
+                                    android:textColor="#888888"
+                                    android:letterSpacing="-0.02"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/banner1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/rankingList"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="15dp"
+                android:src="@drawable/banner"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_button"/>
+
+
+            <LinearLayout
+                android:id="@+id/truyenChonLoc"
+                android:layout_below="@id/banner1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <!-- TextView bên trái -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Truyện Chọn Lọc"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <!-- LinearLayout nằm ở cuối cùng bên phải -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="end|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Xem thêm"
+                        android:textSize="16sp"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/next"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/listTruyenChonLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_below="@id/truyenChonLoc"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <!-- Truyện 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc1"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc2"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc3"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc3"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 4 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc4"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc4"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 5 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc5"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc5"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 6 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc6"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc6"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 7 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc7"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc7"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 8 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageChonloc8"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenChonloc8"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiChonloc8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <LinearLayout
+                android:id="@+id/truyenMoi"
+                android:layout_below="@id/listTruyenChonLoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <!-- TextView bên trái -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Truyện Mới"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:id="@+id/truyenMoiNhat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="end|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Xem thêm"
+                        android:textSize="16sp"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/next"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/listTruyenMoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_below="@id/truyenMoi"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <!-- Truyện 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi1"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi2"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi3"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi3"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 4 -->
+                    <LinearLayout
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi4"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi4"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 5 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi5"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi5"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 6 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi6"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi6"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 7 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi7"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi7"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 8 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageMoi8"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenMoi8"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiMoi8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/banner2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/listTruyenMoi"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="15dp"
+                android:src="@drawable/banner"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_button"/>
+
+            <LinearLayout
+                android:id="@+id/truyenDahoanthanh"
+                android:layout_below="@id/banner2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <!-- TextView bên trái -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đã hoàn thành"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:id="@+id/truyenDaHoanThanh"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="end|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="Xem thêm"
+                        android:textSize="16sp"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/next"
+                        android:layout_marginLeft="5dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/listTruyenDahoanthanh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_below="@id/truyenDahoanthanh"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <!-- Truyện 1 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh1"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh1"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 2 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh2"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh2"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 3 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh3"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh3"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 4 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh4"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh4"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 5 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh5"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh5"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 6 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh6"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh6"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 7 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh7"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh7"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                    <!-- Truyện 8 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <ImageView
+                            android:id="@+id/imageDahoanthanh8"
+                            android:layout_width="100dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/image_cover"
+                            android:scaleType="centerCrop"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/tentruyenDahoanthanh8"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:text="Cầu Xin Em yu Quay Lại"
+                            android:fontFamily="@font/rb_medium"
+                            android:letterSpacing="-0.03"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:lineSpacingMultiplier="0.9"/>
+
+                        <TextView
+                            android:id="@+id/theloaiDahoanthanh8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Thể loại 1"
+                            android:fontFamily="@font/rb_regular"
+                            android:textSize="16dp"
+                            android:textColor="#888888"
+                            android:letterSpacing="-0.02" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

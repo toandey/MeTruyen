@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Mê Truyện</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="screen1">Luôn cập nhật</string>
+    <string name="screen2">Đa dạng thể loại</string>
+    <string name="screen3">Đọc mọi lúc, mọi nơi</string>
+    <string name="screen1desc">Update truyện mới liên tục, không bao giờ bỏ lỡ các chương mới!</string>
+    <string name="screen2desc">Đa dạng thể loại, truyện nào cũng có, ai cũng đọc được!</string>
+    <string name="screen3desc">Đọc truyện bất kỳ nơi đâu, kể cả khi không có mạng!</string>
+    <string name="startDesc">Khám phá Mê Truyện ngay hôm nay để không bỏ lỡ bất kỳ câu truyện thú vị nào!</string>
+    <string name="terms_of_use_content">\nỨng dụng mê truyện (sau đây gọi là ứng dụng) là một ứng dụng cho phép người dùng đọc các truyện ngắn, truyện tranh, tiểu thuyết và các thể loại khác trên điện thoại thông minh hoặc máy tính bảng. Bằng việc tải xuống, cài đặt và sử dụng ứng dụng, bạn đồng ý tuân thủ các điều khoản sử dụng sau đây:\n
+1. Bạn phải có ít nhất 13 tuổi để sử dụng ứng dụng. Nếu bạn chưa đủ 13 tuổi, bạn phải có sự cho phép của cha mẹ hoặc người giám hộ hợp pháp để sử dụng ứng dụng.\n
+2. Bạn không được phép sao chép, phân phối, bán, cho thuê, chuyển nhượng, sửa đổi, thay đổi, hack hoặc tạo các sản phẩm phát sinh từ ứng dụng hoặc bất kỳ nội dung nào được cung cấp bởi ứng dụng mà không có sự cho phép bằng văn bản của chúng tôi.\n
+3. Bạn không được phép sử dụng ứng dụng để gửi hoặc nhận bất kỳ nội dung nào vi phạm luật pháp, xâm phạm quyền riêng tư, quyền sở hữu trí tuệ hoặc quyền khác của bất kỳ bên thứ ba nào, hoặc nội dung có tính xúc phạm, khiêu dâm, bạo lực, gây hiểu lầm hoặc gây hại cho người khác.\n
+4. Bạn không được phép sử dụng ứng dụng để gây ra hoặc tham gia vào bất kỳ hành vi nào làm ảnh hưởng xấu đến hoạt động bình thường của ứng dụng hoặc an ninh của ứng dụng, chẳng hạn như truy cập trái phép vào hệ thống của chúng tôi, truyền virus hoặc mã độc hại, gửi thư rác hoặc tấn công từ chối dịch vụ.\n
+5. Bạn không được phép sử dụng ứng dụng cho mục đích thương mại mà không có sự cho phép bằng văn bản của chúng tôi.\n
+6. Bạn chịu trách nhiệm về việc bảo mật tài khoản và mật khẩu của bạn và không được tiết lộ chúng cho bất kỳ ai khác. Bạn cũng chịu trách nhiệm về mọi hoạt động xảy ra trên tài khoản của bạn và phải thông báo cho chúng tôi ngay lập tức nếu bạn nhận thấy bất kỳ việc sử dụng trái phép nào.\n
+7. Chúng tôi có quyền xóa tài khoản của bạn hoặc hạn chế quyền truy cập vào ứng dụng của bạn nếu bạn vi phạm bất kỳ điều khoản nào trong điều khoản sử dụng này.\n
+8. Chúng tôi cung cấp ứng dụng cho bạn miễn phí nhưng không đảm bảo rằng ứng dụng sẽ luôn hoạt động một cách liên tục, an toàn, chính xác và không có lỗi. Bạn sử dụng ứng dụng hoàn toàn tự chịu rủi ro và chúng tôi không chịu trách nhiệm về bất kỳ thiệt hại nào phát sinh từ việc sử dụng ứng dụng của bạn.\n
+9. Chúng tôi có quyền thay đổi, cập nhật, tạm ngừng hoặc ngừng cung cấp ứng dụng hoặc bất kỳ nội dung nào của ứng dụng mà không cần thông báo trước cho bạn.\n
+10. Chúng tôi có quyền sửa đổi điều khoản sử dụng này bất cứ lúc nào và sẽ thông báo cho bạn về những thay đổi đó qua ứng dụng hoặc qua email. Việc bạn tiếp tục sử dụng ứng dụng sau khi nhận được thông báo sẽ được coi là bạn đã chấp nhận những thay đổi đó.\n
+Nếu bạn có bất kỳ câu hỏi nào về điều khoản sử dụng này, vui lòng liên hệ với chúng tôi qua email: support@metruyen.pro"</string>
+    <string name="manual_content">Mê Truyện là ứng dụng đọc truyện trên điện thoại android, cho phép bạn đọc truyện online hoặc offline, nghe truyện audio. Để sử dụng ứng dụng này, bạn cần làm theo các bước sau:
+        \n\nBước 1: Tải ứng dụng Mê Truyện từ App Store hoặc Google Play và cài đặt trên điện thoại của bạn.\n
+        \nBước 2: Mở ứng dụng và đăng nhập bằng tài khoản của bạn. Nếu bạn chưa có tài khoản, bạn có thể đăng ký miễn phí.\n
+        \nBước 3: Chọn thể loại truyện bạn muốn đọc từ danh sách trên màn hình chính. Bạn có thể tìm kiếm truyện theo tên, tác giả, thể loại hoặc từ khóa.\n
+        \nBước 4: Sau khi chọn truyện, bạn có thể đọc truyện online bằng cách nhấn vào nút “Đọc”. Bạn cũng có thể tải truyện về điện thoại để đọc offline bằng cách nhấn vào nút “Tải”.\n
+        \nBước 5: Khi đọc truyện, bạn có thể điều chỉnh cỡ chữ, màu nền, độ sáng, chế độ ban đêm hoặc chế độ ngang dọc bằng cách nhấn vào nút “Cài đặt”. Bạn cũng có thể đánh dấu chương đang đọc hoặc chương yêu thích bằng cách nhấn vào nút “Đánh dấu”. Bạn có thể xem danh sách các chương đã đánh dấu bằng cách nhấn vào nút “Danh sách”.\n
+        \nBước 6: Khi đọc truyện, bạn có thể bình luận, đánh giá, chia sẻ hoặc theo dõi truyện bằng cách nhấn vào các nút tương ứng. Bạn có thể xem các bình luận, đánh giá, chia sẻ hoặc truyện đã theo dõi của bạn bằng cách nhấn vào nút “Tài khoản”.\n
+        \nĐây là hướng dẫn sử dụng ứng dụng Mê Truyện trên điện thoại. Hy vọng bạn sẽ có những giây phút đọc truyện thú vị và hấp dẫn với ứng dụng này. Chúc bạn đọc truyện vui vẻ!</string>
+    <string name="infor_app_content">Mê Truyện là ứng dụng đọc truyện online và offline trên điện thoại di động. Sở hữu hàng ngàn câu chuyện với đa dạng thể loại khác nhau giúp bạn thoải mái lựa chọn.
+\n\nỨng dụng có dung lượng nhẹ, sử dụng miễn phí, thao tác mượt mà, dễ sử dụng.
+\n\nỨng dụng có kho truyện khổng lồ với nhiều thể loại như ngôn tình, xuyên không, cổ đại, giới giải trí, nữ hiệp.
+\n\nỨng dụng có giao diện bắt mắt, dễ sử dụng, có thể tùy chỉnh cỡ chữ, màu nền, độ sáng, font chữ.
+\n\nỨng dụng có tính năng nghe AI đọc truyện online và offline, bóng bóng đọc truyện trên màn hình, bảng xếp hạng truyện hay nhất, đánh dấu chương đang đọc hoặc yêu thích.
+\n\nỨng dụng có tính năng làm nhiệm vụ kiếm tiền, sử dụng tiền để mua phiếu tặng tác giả hoặc người dịch, thảo luận, trò chuyện, bình luận, đánh giá, chia sẻ, theo dõi truyện.</string>
+    <string name="information_content" />
+    <string name="user_manual_content" />
+    <string name="profile_image_description" />
+    <string name="title_activity_search">ActivitySearch</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="truyen_hot">Truyện Hot</string>
+    <string name="truyen_moi">Truyện Mới</string>
+</resources>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="img/logo/unnamed.png" type="image/x-icon">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-Language" content="vi">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="Trải nghiệm đọc truyện tuyệt vời trên điện thoại Android với ứng dụng Mê Truyện.">
+    <meta name="keywords" content="đọc truyện, ứng dụng đọc truyện, Android, ứng dụng Mê Truyện">
+    <meta name="author" content="Mê Truyện">
+    <meta property="og:image" content="https://medoctruyen.top/admin/assets/img/post.jpg">
+    <link rel="canonical" href="https://medoctruyen.top">
+    <meta property="og:url" content="https://medoctruyen.top">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://medoctruyen.top/admin/assets/img/post.jpg">
+    <meta property="og:image:width" content="500">
+    <meta property="og:image:height" content="500">
+    <title>Mê Truyện</title>
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/fontAwsome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+
+    <!-- preloader start -->
+    <div class="preloader">
+        <span></span>
+    </div>
+    <!-- preloader End -->
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <!-- Brand -->
+        <div class="container">
+            <a class="navbar-brand" href="index.html">  Mê Truyện</a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+             <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-scroll-nav="0" href="#">Trang Chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="1" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="2" href="#">Screenshots</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="3" href="#">Tải xuống</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="4" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-scroll-nav="5" href="#">Liên hệ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Home section start-->
+    <section class="home d-flex align-items-center" id="home" data-scroll-index="0">
+        <div class="effect-wrap">
+            <i class="fas fa-plus effect effect-1"></i>
+            <i class="fas fa-plus effect effect-2"></i>
+            <i class="fas fa-circle-notch effect effect-3"></i>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="home-text">
+                        <h1>Khám phá hàng ngàn câu chuyện hấp dẫn cùng Mê Truyện!</h1>
+                        <p>Với Mê Truyện, bạn có thể tìm kiếm, đọc và tải về hàng ngàn truyện từ nhiều nguồn khác nhau, bao gồm các thể loại như: truyện ngôn tình, truyện kiếm hiệp, truyện tiên hiệp, truyện huyền huyễn và nhiều thể loại khác. Hãy tải ứng dụng Mê Truyện ngay hôm nay để thỏa mãn niềm đam Mê Truyện của bạn.</p>
+                        <div class="home-btn">
+                            <a href="#" class="btn btn-1" data-scroll-goto="4">Download App</a>
+                            <button type="button" class="btn btn-1 video-play-button" onclick="video_play()"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 text-center">
+                    <div class="home-img">
+                        <div class="circle"></div>
+                        <img src="img/app-screenshots/1.png" alt="Landing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Home section End-->
+
+    <!-- Features section Start -->
+    <section class="features section-padding" id="features" data-scroll-index="1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Tính năng <span>nổi bật</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel features-carousel">
+                    <div class="features-item">
+                        <div class="icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h3>Luôn Miễn Phí</h3>
+                        <p>Tìm kiếm, đọc và tải về hàng ngàn truyện từ nhiều nguồn khác nhau với đa dạng thể loại.</p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon"><i class="fas fa-check"></i></div>
+                        <h3>Đọc Truyện Offline</h3>
+                        <p>Bạn có thể tải truyện yêu thích về máy và đọc ở bất kỳ đâu mà không cần kết nối mạng. </p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon"><i class="fas fa-sync"></i></div>
+                        <h3>Update nhanh chóng</h3>
+                        <p>Truyện luôn được cập nhật nhanh nhất, chính xác nhất khi tác giả ra thêm chương mới.</p>
+                    </div>
+                    <div class="features-item">
+                        <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3>Tuỳ biến giao diện</h3>
+                        <p>Dễ dàng thay đổi màu nền, kích thước chữ, độ sáng và chế độ đọc theo sở thích của bạn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features section End -->
+
+    <!-- fun factes section start -->
+    <section class="fun-facts section-padding" data-scroll-index="1">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-5">
+                    <div class="fun-facts-img text-center">
+                        <img src="img/app-screenshots/3.png" alt="Fun Facts">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-7">
+                    <div class="section-title">
+                        <h2>Những điều <span>Thú vị</span> </h2>
+                    </div>
+                    <div class="fun-facts-text">
+                        <p>Khám phá những thành tựu mà team Mê Truyện đã đạt được trong suốt chặng đường phát triển vừa qua!</p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-1">
+                                    <h3>4000+</h3>
+                                    <span>Lượt tải xuống</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-2">
+                                    <h3>200</h3>
+                                    <span>Lượt thích</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-3">
+                                    <h3>100+</h3>
+                                    <span>Người dùng</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="fun-fact-item style-4">
+                                    <h3>1000+</h3>
+                                    <span>Câu Truyện</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fun factes section End -->
+
+
+    <!-- App screenshots section start -->
+    <section class="app-screenshots section-padding" data-scroll-index="2" id="screenshots">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>App <span>Screenshots</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel screenshots-carousel">
+                    <div class="screenshot-item">
+                        <img src="img/app-screenshots/1.png" alt="screenshots">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="img/app-screenshots/2.png" alt="screenshots">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="img/app-screenshots/3.png" alt="screenshots">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="img/app-screenshots/4.png" alt="screenshots">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="img/app-screenshots/5.png" alt="screenshots">
+                    </div>
+                    <div class="screenshot-item">
+                        <img src="img/app-screenshots/6.png" alt="screenshots">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- App screenshots section End -->
+
+
+    <!-- video pupup start -->
+    <div class="video-popup" onclick="video_play()">
+        <div class="video-popup-inner">
+            <i class="fas fa-times video-popup-close"></i>
+            <div class="iframe-box">
+                <iframe id="player-1" src="https://www.youtube.com/embed/45izX9pkiiw" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <!-- video pupup End -->
+
+    <!-- App Download Section Start -->
+    <section class="app-download section-padding" data-scroll-index="3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2><span>Tải Xuống</span> Mê Truyện </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-download-item">
+                        <i class="fab fa-android"></i>
+                        <h3>file APK</h3>
+                        <a href="#" class="btn btn-2">Tải xuống</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-download-item">
+                        <i class="fab fa-google-play"></i>
+                        <h3>Google Play</h3>    
+                        <a href="#" class="btn btn-2">Sớm gia mắt</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-download-item">
+                        <i class="fab fa-apple"></i>
+                        <h3>Apple Store</h3>
+                        <a href="#" class="btn btn-2">Sớm gia mắt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- App Download Section End -->
+
+    <!-- how it works section start -->
+    <section class="how-it-works section-padding" data-scroll-index="3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2><span>Tham gia</span> ngay hôm nay</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item line-right">
+                        <div class="step">1</div>
+                        <h3>Tải xuống</h3>
+                        <p>Nhấp vào liên kết phía trên và tải xuống phiên bản phù hợp.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item line-right">
+                        <div class="step">2</div>
+                        <h3>Tạo tài khoản</h3>
+                        <p>Để sử dụng mọi dịch vụ mà Mê Truyện cung cấp cho bạn.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item line-right">
+                        <div class="step">3</div>
+                        <h3>Lựa chọn truyện</h3>
+                        <p>Lựa chọn câu chuyện yêu thích giữa hàng ngàn câu chuyện có sẵn.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="how-it-works-item">
+                        <div class="step">4</div>
+                        <h3>Đọc truyện ngay</h3>
+                        <p>Khám phá ngay câu chuyện yêu thích ở bất kỳ nơi nào bạn muốn.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- how it works section End -->
+
+    <!-- Testimonials section start -->
+    <section class="testimonials section-padding" data-scroll-index="3" id="testimonials">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2>Mọi người <span>nói gì</span> khi sử dụng</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel testimonials-carousel">
+                    <div class="testimonials-item">
+                        <div class="img-box">
+                            <img src="img/testimonial/1.jpg" alt="testimonials">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Mê Truyện là ứng dụng đọc truyện hay nhất mà mình từng dùng. Giao diện đẹp, truyện đa dạng, cập nhật nhanh. Mình không thể rời mắt khỏi màn hình khi đọc truyện trên ứng dụng này! Nó giúp mình giải toả căng thẳng sau những giờ làm việc mệt mỏi.</p>
+                        <h3>Thanh Hà</h3>
+                        <span>Sinh Viên</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+                    <div class="testimonials-item">
+                        <div class="img-box">
+                            <img src="img/testimonial/3.jpg" alt="testimonials">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Tôi rất thích ứng dụng Mê Truyện. Nó có rất nhiều thể loại truyện để lựa chọn, từ trinh thám, kinh dị, tình cảm, đến hài hước, phiêu lưu. Tôi cũng thường theo dõi những bình luận và đánh giá của các độc giả khác để tìm kiếm những truyện hấp dẫn.</p>
+                        <h3>Thành Nam</h3>
+                        <span>Coder</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+                    <div class="testimonials-item">
+                        <div class="img-box">
+                            <img src="img/testimonial/2.jpg" alt="testimonials">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Ứng dụng Mê Truyện là một người bạn đồng hành của tôi trong những lúc rảnh rỗi. Tôi có thể đọc truyện mọi lúc mọi nơi, chỉ cần có kết nối internet. Ứng dụng cũng rất dễ sử dụng, có chế độ đọc ban đêm, điều chỉnh độ sáng và truyện được cập nhật rất nhanh!</p>
+                        <h3>Thanh Trúc</h3>
+                        <span>UI Designer</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+
+                    </div>
+                    <div class="testimonials-item">
+                        <div class="img-box">
+                            <img src="img/testimonial/4.jpg" alt="testimonials">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <p>Tôi đã dùng ứng dụng Mê Truyện được hơn một năm và tôi rất hài lòng với nó. Ứng dụng có những tính năng tuyệt vời như lưu truyện, đánh dấu trang, tải truyện về máy để đọc offline. Ứng dụng cũng thường xuyên cập nhật những truyện mới và hot nhất.</p>
+                        <h3>Tuấn Tú</h3>
+                        <span>Giảng Viên</span>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials section End -->
+
+    <!-- Faq section Start -->
+    <section class="faq section-padding" data-scroll-index="4" id="pricing">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2><span>Câu hỏi</span> Thường gặp</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div id="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-header" data-toggle="collapse" data-target="#collapse-01">
+                                <h3>Làm thế nào để tải ứng dụng Mê Truyện?</h3>
+                            </div>
+                            <div class="collapse show" id="collapse-01" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Bạn có thể tải ứng dụng Mê Truyện miễn phí trên các cửa hàng ứng dụng như Google Play, App Store, hoặc Windows Store. Bạn chỉ cần tìm kiếm từ khóa “Mê Truyện” và nhấn vào nút tải về. Sau khi tải xong, bạn có thể mở ứng dụng và đăng nhập bằng tài khoản của bạn hoặc tạo một tài khoản mới nếu bạn chưa có.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse-02">
+                                <h3>Làm thế nào để đăng ký tài khoản Mê Truyện?</h3>
+                            </div>
+                            <div class="collapse" id="collapse-02" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Bạn có thể đăng ký tài khoản Mê Truyện bằng cách nhấn vào nút "Đăng ký" ở góc dưới của màn hình, sau đó nhập địa chỉ email, mật khẩu, ngày sinh và tên hiển thị của bạn. Bạn cũng có thể đăng ký bằng tài khoản Facebook, Google hoặc Zalo của bạn.</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse-03">
+                                <h3>Làm thế nào để tìm kiếm truyện trên Mê Truyện?</h3>
+                            </div>
+                            <div class="collapse" id="collapse-03" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Bạn có thể tìm kiếm truyện trên Mê Truyện bằng cách nhập từ khóa vào thanh tìm kiếm ở trên cùng của màn hình, sau đó nhấn vào nút "Tìm kiếm". Bạn cũng có thể lọc truyện theo thể loại, tình trạng, năm xuất bản, số lượt xem, số lượt thích và nhiều tiêu chí khác bằng cách nhấn vào nút "Lọc truyện" ở bên phải của thanh tìm kiếm.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-header collapsed" data-toggle="collapse" data-target="#collapse-04">
+                                <h3>Làm thế nào để đọc truyện trên Mê Truyện?</h3>
+                            </div>
+                            <div class="collapse" id="collapse-04" data-parent="#accordion">
+                                <div class="accordion-body">
+                                    <p>Bạn có thể đọc truyện trên Mê Truyện bằng cách nhấn vào tên truyện hoặc ảnh bìa truyện trong danh sách truyện, sau đó chọn chương truyện bạn muốn đọc. Bạn có thể điều chỉnh cỡ chữ, màu nền, độ sáng và chế độ đọc ngang hoặc dọc bằng cách nhấn vào nút "Cài đặt" ở góc dưới bên phải của màn hình. Bạn cũng có thể thêm truyện vào danh sách yêu thích, tải về để đọc ngoại tuyến, chia sẻ truyện với bạn bè và gửi phản hồi cho tác giả bằng cách nhấn vào các nút tương ứng ở dưới màn hình.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Faq section End -->
+
+    <!-- Contact section start -->
+    <section class="contact section-padding" data-scroll-index="5"  data-scroll-index="5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-title">
+                        <h2><span>Liên hệ</span> với Mê Truyện</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-5">
+                    <div class="contact-info">
+                        <h3>Phương thức liên lạc</h3>
+                        <div class="contact-info-item">
+                            <i class="fas fa-location-arrow"></i>
+                            <h4>Địa chỉ</h4>
+                            <p>Hà Đông, Hà Nội</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <h4>Email</h4>
+                            <p>hi@medoctruyen.top</p>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <h4>Hotline</h4>
+                            <p>+84 9688 888 68</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-7">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Tên" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <input type="email" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Số điện thoại" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Vấn đề cần hỗ trợ" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <textarea placeholder="Nội dung cần hỗ trợ" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-2">Gửi Yêu Cầu</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact section End -->
+
+
+    <!-- Footer section start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Mê Truyện</h3>
+                        <p>Đọc truyện online, đọc truyện chữ, truyện hay. Luôn cập nhật những bộ truyện mới thuộc các thể loại đặc sắc như truyện tiên hiệp, truyện kiếm hiệp, hay truyện ngôn tình một cách nhanh nhất. Hỗ trợ mọi thiết bị như di động và máy tính bảng.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Company</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Chính sách bảo mật</a>
+                            </li>
+                            <li>
+                                <a href="#">Điều khoản và điều kiện</a>
+                            </li>
+                            <li>
+                                <a href="#">Update</a>
+                            </li>
+                            <li>
+                                <a href="#">Dịch vụ cung cấp</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Liên kết nhanh</h3>
+                        <ul>
+                            <li>
+                                <a href="#" data-scroll-nav="0">Trang Chủ</a>
+                            </li>
+                            <li>
+                                <a href="#" data-scroll-nav="1">Fearutes</a>
+                            </li>
+                            <li>
+                                <a href="#" data-scroll-nav="2">Screenshots</a>
+                            </li>
+
+                            <li>
+                                <a href="#" data-scroll-nav="3">Tải Xuống</a>
+                            </li>
+                            <li>
+                                <a href="#" data-scroll-nav="4">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#" data-scroll-nav="5">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <h3>Kết nối với Mê Truyện</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Facebook</a>
+                            </li>
+                            <li>
+                                <a href="#">Twitter</a>
+                            </li>
+                            <li>
+                                <a href="#">instegram</a>
+                            </li>
+                            <li>
+                                <a href="#">Linkedin</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="copyright-text">&copy;2023 Copyright <strong><span>Mê Truyện</span></strong>. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section End -->
+
+    <!-- Toggle Theme start ligt and dark mode  -->
+    <div class="toggle-theme">
+        <i class="fas">
+
+        </i>
+    </div>
+    <!-- Toggle Theme End ligt and dark mode-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scrollIt.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

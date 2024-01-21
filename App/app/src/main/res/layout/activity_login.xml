@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal|top"
+            android:text="Chào mừng bạn quay trở lại!"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            android:letterSpacing="-0.02"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="220dp"
+            android:layout_height="154dp"
+            android:layout_below="@+id/header1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="123dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/welcome" />
+
+        <EditText
+            android:id="@+id/login_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/logo"
+            android:layout_marginTop="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rounded"
+            android:drawableLeft="@drawable/baseline_person_24_orange"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Tên người dùng"
+            android:inputType="text|textNoSuggestions"
+            android:padding="8dp"
+            android:textColorHint="#6c6c6c"
+            android:textColor="@color/black"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/login_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:id="@+id/constraintlayoutPass"
+            android:background="@drawable/rounded">
+
+            <EditText
+                android:id="@+id/login_password"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_no_underline"
+                android:drawableLeft="@drawable/baseline_lock_24_orange"
+                android:drawablePadding="8dp"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:fontFamily="@font/inter_regular"
+                app:layout_constraintEnd_toStartOf="@+id/showHidePasswordButton1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColorHint="#6c6c6c"
+                android:textColor="@color/black"/>
+
+            <ImageView
+                android:id="@+id/showHidePasswordButton1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="Hiển thị/Ẩn mật khẩu"
+                android:src="@drawable/baseline_visibility_24"
+                app:layout_constraintBottom_toBottomOf="@+id/login_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/login_password" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/constraintlayoutPass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Quên mật khẩu?"
+            android:fontFamily="@font/inter_medium"
+            android:textColor="@color/purple"
+            android:textSize="18dp"
+            android:letterSpacing="-0.02"/>
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/forgot_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/inter_medium"
+            android:background="@drawable/rounded_button_background"
+            android:text="Đăng Nhập"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:letterSpacing="0.01"/>
+
+        <TextView
+            android:id="@+id/signUpRedirectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Chưa có tài khoản? đăng ký ngay"
+            android:textColor="@color/purple"
+            android:textSize="18dp"
+            android:letterSpacing="-0.02"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/waveViewEnd1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wave1"/>
+    <View
+        android:id="@+id/waveViewEnd2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wave5" />
+</RelativeLayout>

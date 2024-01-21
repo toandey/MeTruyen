@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Quyền truy cập máy ảnh -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- Quyền đọc bộ nhớ ngoại vi -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Quyền ghi bộ nhớ ngoại vi -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BIND_TTS_SERVICE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MeDocTruyen"
+        tools:targetApi="31">
+        <activity
+            android:name=".adapter.fragment.profile.ActivityFAQ"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.ActivityAllChapter"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.ActivityAllStory"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.ActivitySearchStory"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.ActivityListChapter"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.ActivityReading"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.ActivityStory"
+            android:exported="false" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".adapter.fragment.profile.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.DeleteAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.EditAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.TermsOfUseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.RateAppActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.InformationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.UserManualActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapter.fragment.profile.AccountManagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GetStarted"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

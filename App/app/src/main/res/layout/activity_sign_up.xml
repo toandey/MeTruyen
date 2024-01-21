@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    android:id="@+id/a">
+    <View
+        android:id="@+id/waveViewTop1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/wave2"
+        android:layout_marginTop="-15dp"/>
+    <View
+        android:id="@+id/waveViewTop2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/wave3" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp">
+
+        <TextView
+            android:id="@+id/header1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/inter_medium"
+            android:gravity="center_horizontal|top"
+            android:letterSpacing="-0.02"
+            android:text="Tham gia ngay hôm nay!"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/header1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/rounded"
+            android:drawableLeft="@drawable/baseline_person_24_orange"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Tên người dùng"
+            android:inputType="text|textNoSuggestions"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#6c6c6c" />
+
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/signup_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:drawableLeft="@drawable/baseline_mail_outline_24_orange"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:hint="Email"
+            android:inputType="text|textNoSuggestions"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#6c6c6c" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintlayoutPASS"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/signup_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded">
+
+            <EditText
+                android:id="@+id/signup_password"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_no_underline"
+                android:drawableLeft="@drawable/baseline_lock_24_orange"
+                android:drawablePadding="8dp"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#6c6c6c"
+                app:layout_constraintEnd_toStartOf="@+id/showHidePasswordButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/showHidePasswordButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="15dp"
+                android:contentDescription="Hiển thị/Ẩn mật khẩu"
+                android:src="@drawable/baseline_visibility_24"
+                app:layout_constraintBottom_toBottomOf="@+id/signup_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/signup_password" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <EditText
+            android:id="@+id/signup_re_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/constraintlayoutPASS"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded"
+            android:drawableLeft="@drawable/baseline_lock_24_orange"
+            android:drawablePadding="8dp"
+            android:hint="Nhập lại mật khẩu"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="#6c6c6c" />
+
+        <LinearLayout
+            android:id="@+id/acceptCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_re_password"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/acceptTermsCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="Tôi đồng ý với Điều Khoản Sử Dụng"
+                android:textSize="14dp"
+                android:textColor="@color/purple" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/acceptCheckbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_button_background"
+            android:fontFamily="@font/inter_medium"
+            android:letterSpacing="0.01"
+            android:text="Đăng Ký"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/loginRedirectText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/inter_medium"
+            android:letterSpacing="-0.02"
+            android:text="Đã có tài khoản? đăng nhập ngay"
+            android:textColor="@color/purple"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/waveViewEnd1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wave1"/>
+    <View
+        android:id="@+id/waveViewEnd2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wave5" />
+</RelativeLayout>

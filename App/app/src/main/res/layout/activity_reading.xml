@@ -1,0 +1,110 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".adapter.fragment.profile.ActivityReading">
+
+
+    <LinearLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/back1" />
+
+        <!-- Chapter title -->
+        <TextView
+            android:id="@+id/tenChuong"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Chương 1"
+            android:letterSpacing="-0.05"
+            android:textColor="#6a6a6a"
+            android:fontFamily="@font/inter_regular"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- Time information -->
+        <TextClock
+            android:id="@+id/thoiGian"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:format24Hour="HH:mm"
+            android:letterSpacing="-0.05"
+            android:textColor="#6a6a6a"
+            android:fontFamily="@font/inter_regular"
+            android:layout_marginEnd="5dp"/>
+
+    </LinearLayout>
+
+    <!-- Use a ViewFlipper for smooth transitions between chapters -->
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Chapter content layout -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:fillViewport="true">
+
+            <!-- Chapter content views -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Chapter title -->
+                <TextView
+                    android:id="@+id/tenChuong1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chương 1: Ngươi có bệnh, ta có thể trị"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/inter_medium"/>
+
+                <!-- Chapter content -->
+                <TextView
+                    android:id="@+id/noiDungChuong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:letterSpacing="-0.03"
+                    android:text=""
+                    android:textColor="#6a6a6a"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="40dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+    </ViewFlipper>
+
+</LinearLayout>

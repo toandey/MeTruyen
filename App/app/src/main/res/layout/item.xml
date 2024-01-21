@@ -1,0 +1,86 @@
+<!-- item.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivAnhBia"
+            android:layout_width="70dp"
+            android:layout_height="105dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_cover" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTenTruyen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:letterSpacing="-0.05"
+                android:text="Tên truyện"
+                android:textColor="@color/black"
+                android:textSize="14dp"
+                android:textAllCaps="false"/>
+
+
+            <TextView
+                android:id="@+id/tvTheLoai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="Thể loại"
+                android:letterSpacing="-0.05"
+                android:textColor="#6a6a6a"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tvViewStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="Lượt xem: 10"
+                android:letterSpacing="-0.05"
+                android:textColor="#6a6a6a"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rounded_button"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTrangThai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/rounded_button"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Trạng thái"
+                    android:letterSpacing="-0.05"
+                    android:textColor="#6a6a6a"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

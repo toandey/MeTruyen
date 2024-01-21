@@ -1,0 +1,6 @@
+{
+    "require": {
+        "google/cloud": "^0.224.0",
+        "ext-json": "*"
+    }
+}
